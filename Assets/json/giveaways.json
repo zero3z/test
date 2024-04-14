@@ -1,0 +1,27 @@
+{
+  "giveawayManager": {
+    "privateMessageInformation": true,
+    "everyoneMention": false,
+    "reaction": "<a:dm_pinkheart2:1141731851170484224>"
+  },
+  "messages": {
+    "giveaway": "<a:dm_pinkheart:1141727277235851274> **GIVEAWAY** <a:dm_pinkheart:1141727277235851274>",
+    "giveawayEnded": "<a:dm_pinkheart:1141727277235851274> **GIVEAWAY ENDED** <a:dm_pinkheart:1141727277235851274>",
+    "title": "{this.prize}",
+    "drawing": "<a:dm_pinkrollingstar:1141733209533583460>・Kết thúc trong: {timestamp}",
+    "inviteToParticipate": "Bấm <a:dm_pinkheart2:1141731851170484224> để tham gia giveaway!",
+    "winMessage": {
+      "content": "🎉 Chúc mừng {winners}! đã trúng **{this.prize}**",
+      "replyToGiveaway": true
+    },
+    "embedFooter": "{this.winnerCount} giải",
+    "noWinner": "Giveaway bị hủy bỏ, không có người tham gia hợp lệ.",
+    "hostedBy": "<a:dm_pinksheep:1141734601019109457>・Tổ chức bởi: {this.hostedBy}",
+    "winners": "<a:dm_cupvang:1141727918377160704>・Người chiến thắng:",
+    "endedAt": "Sẽ kết thúc sau",
+    "paused": "⚠️ **This giveaway is paused!**",
+    "infiniteDurationText": "`NEVER`",
+    "congrat": "Người chiến thắng mới : {winners}! Xin chúc mừng, giải thưởng củ bạn là**{this.prize}**!",
+    "error": "Reroll bị huỷ bỏ, không có người tham gia hợp lệ."
+  }
+}
