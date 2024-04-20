@@ -11,7 +11,7 @@
     "drawing": "<a:dm_pinkrollingstar:1141733209533583460>・Kết thúc trong: {timestamp}",
     "inviteToParticipate": "Bấm <a:dm_pinkheart2:1141731851170484224> để tham gia giveaway!",
     "winMessage": {
-      "content": "🎉 Chúc mừng {winners}! đã trúng **{this.prize}**",
+      "content": "<:giveaway:1231369977756647484> Chúc mừng {winners}! đã trúng **{this.prize}**",
       "replyToGiveaway": true
     },
     "embedFooter": "{this.winnerCount} giải",
@@ -21,7 +21,7 @@
     "endedAt": "Sẽ kết thúc sau",
     "paused": "⚠️ **This giveaway is paused!**",
     "infiniteDurationText": "`NEVER`",
-    "congrat": "Người chiến thắng mới : {winners}! Xin chúc mừng, giải thưởng củ bạn là**{this.prize}**!",
+    "congrat": "Người chiến thắng mới : {winners}! <:giveaway:1231369977756647484> Xin chúc mừng, giải thưởng của bạn là**{this.prize}**!",
     "error": "Reroll bị huỷ bỏ, không có người tham gia hợp lệ."
   }
 }
