@@ -3,7 +3,7 @@ const { evaluate } = require("mathjs");
 module.exports = {
   name: "math",
   group: "util",
-  aliases: ["m"],
+  aliases: [],
   cooldown: 10,
   description: "Tính toán giúp bạn",
   usage: "{prefix}math <phép tính>",
