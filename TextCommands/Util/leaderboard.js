@@ -4,7 +4,7 @@ const dailySchema = require("../../Databases/Models/dailySchema");
 const { EmbedBuilder } = require("discord.js")
 
 module.exports = {
-  name: "leaderbord",
+  name: "leaderboard",
   group: "util",
   aliases: ["lb", "top"],
   cooldown: 5,
