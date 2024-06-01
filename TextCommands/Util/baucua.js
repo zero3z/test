@@ -31,6 +31,7 @@ module.exports = {
 
     let msg = await message.channel.send(`${bc} ${bc} ${bc}`)
     let msg2 = await message.channel.send("<:dm_uongtra:1141803196944236606> **Đợi xíu để lắc nè**")
+    console.log(`${name[r1]}・${name[r2]}・${name[r3]}`)
     await client.sleep(2000)
     msg.edit(`${emojis[r1]} ${bc} ${bc}`)
     await client.sleep(2000)
@@ -38,5 +39,6 @@ module.exports = {
     await client.sleep(1500)
     msg.edit(`${emojis[r1]} ${emojis[r2]} ${emojis[r3]}`)
     msg2.edit(`<a:dm_pinkfire:1141799130805567610> **${name[r1]}・${name[r2]}・${name[r3]}** <a:dm_pinkfire:1141799130805567610>`)
+    
   }
 }
