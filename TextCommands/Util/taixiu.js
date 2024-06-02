@@ -16,15 +16,7 @@ module.exports = {
   description: "Lắc tài xỉu",
   usage: "{prefix}taixiu",
   async execute(client, message, args) {
-    if (!message.member.roles.cache.find(r => r.name === "Lắc Tài Xỉu")) return client.deleteMsg(message, `${client.e.error} Bạn phải có role \`Lắc Tài Xỉu\` để có thể sử dụng lệnh này!`, 8000, "reply")
-
-    function shuffle(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]]
-      }
-      return array;
-    }
+    if (!message.member.roles.cache.find(r => r.name === "Lắc Tài Xỉu")) return client.deleteMsg(message, `${client.e.error} Bạn phải có role \`Lắc Tài Xỉu\` để có thể sử dụng lệnh này!`, 8000, "reply");
 
     let shuffledEmoji = shuffle([...emojis])
     let r1 = shuffledEmoji[0];
@@ -50,3 +42,11 @@ module.exports = {
     msg2.edit(`<a:dm_pinkfire:1141799130805567610> **${diem}・${taixiu}・${chanle}**  <a:dm_pinkfire:1141799130805567610>`)
   }
 }
+
+function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]
+      }
+      return array;
+    }
