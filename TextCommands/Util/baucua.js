@@ -13,7 +13,7 @@ const name = [
   "Nai",
   "Gà",
   "Bầu"
-]
+];
 const bc = "<a:lacbaucua:929768889565466634>";
 
 module.exports = {
@@ -24,21 +24,33 @@ module.exports = {
   description: "Lắc bầu cua",
   usage: "{prefix}lacbaucua",
   async execute(client, message, args) {
-    if (!message.member.roles.cache.find(r => r.name === "Lắc Bầu Cua")) return client.deleteMsg(message, `${client.e.error} Bạn phải có role \`Lắc Bầu Cua\` để có thể sử dụng lệnh này!`, 8000, "reply")
-    let r1 = Math.floor(Math.random() * emojis.length);
-    let r2 = Math.floor(Math.random() * emojis.length);
-    let r3 = Math.floor(Math.random() * emojis.length);
+    if (!message.member.roles.cache.find(r => r.name === "Lắc Bầu Cua")) {
+      return client.deleteMsg(message, `${client.e.error} Bạn phải có role \`Lắc Bầu Cua\` để có thể sử dụng lệnh này!`, 8000, "reply");
+    }
 
-    let msg = await message.channel.send(`${bc} ${bc} ${bc}`)
-    let msg2 = await message.channel.send("<:dm_uongtra:1141803196944236606> **Đợi xíu để lắc nè**")
-    console.log(`${name[r1]}・${name[r2]}・${name[r3]}`)
-    await client.sleep(2000)
-    msg.edit(`${emojis[r1]} ${bc} ${bc}`)
-    await client.sleep(2000)
-    msg.edit(`${emojis[r1]} ${emojis[r2]} ${bc}`)
-    await client.sleep(1500)
-    msg.edit(`${emojis[r1]} ${emojis[r2]} ${emojis[r3]}`)
-    msg2.edit(`<a:dm_pinkfire:1141799130805567610> **${name[r1]}・${name[r2]}・${name[r3]}** <a:dm_pinkfire:1141799130805567610>`)
-    
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    let shuffledEmojis = shuffle([...emojis]);
+    let r1 = shuffledEmojis[Math.floor(Math.random() * shuffledEmojis.length)];
+    let r2 = shuffledEmojis[Math.floor(Math.random() * shuffledEmojis.length)];
+    let r3 = shuffledEmojis[Math.floor(Math.random() * shuffledEmojis.length)];
+
+    let msg = await message.channel.send(`${bc} ${bc} ${bc}`);
+    let msg2 = await message.channel.send("<:dm_uongtra:1141803196944236606> **Đợi xíu để lắc nè**");
+    console.log(`${name[emojis.indexOf(r1)]}・${name[emojis.indexOf(r2)]}・${name[emojis.indexOf(r3)]}`);
+
+    await client.sleep(2000);
+    msg.edit(`${r1} ${bc} ${bc}`);
+    await client.sleep(2000);
+    msg.edit(`${r1} ${r2} ${bc}`);
+    await client.sleep(1500);
+    msg.edit(`${r1} ${r2} ${r3}`);
+    msg2.edit(`<a:dm_pinkfire:1141799130805567610> **${name[emojis.indexOf(r1)]}・${name[emojis.indexOf(r2)]}・${name[emojis.indexOf(r3)]}** <a:dm_pinkfire:1141799130805567610>`);
   }
-}
+};
