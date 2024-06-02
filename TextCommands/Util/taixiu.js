@@ -22,16 +22,16 @@ module.exports = {
     let r1 = shuffledEmoji[0];
     let r2 = shuffledEmoji[1];
     let r3 = shuffledEmoji[2];
-    const diem = (emojis.indexOf(r1) + 1) + (emojis.indexOf(r2) + 1) + (emoji.indexOf(r3) + 1)
+    const diem = (emojis.indexOf(r1) + 1) + (emojis.indexOf(r2) + 1) + (emojis.indexOf(r3) + 1)
 
     let msg = await message.channel.send(`${tx} ${tx} ${tx}`)
     let msg2 = await message.channel.send("<:dm_uongtra:1141803196944236606> **Đợi xíu để lắc nè**")
     await client.sleep(2000)
-    msg.edit(`${emojis[r1]} ${tx} ${tx}`)
+    msg.edit(`${r1} ${tx} ${tx}`)
     await client.sleep(2000)
-    msg.edit(`${emojis[r1]} ${emojis[r2]} ${tx}`)
+    msg.edit(`${r1} ${r2} ${tx}`)
     await client.sleep(1500)
-    msg.edit(`${emojis[r1]} ${emojis[r2]} ${emojis[r3]}`)
+    msg.edit(`${r1} ${r2} ${r3}`)
     let taixiu
     if (diem >= 1 && diem <= 10) {
       taixiu = "Xỉu"
