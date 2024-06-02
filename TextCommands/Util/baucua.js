@@ -28,6 +28,7 @@ module.exports = {
       return client.deleteMsg(message, `${client.e.error} Bạn phải có role \`Lắc Bầu Cua\` để có thể sử dụng lệnh này!`, 8000, "reply");
     }
 
+    // Hàm xáo trộn mảng
     function shuffle(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -36,10 +37,14 @@ module.exports = {
       return array;
     }
 
+    // Xáo trộn mảng emojis
     let shuffledEmojis = shuffle([...emojis]);
+
+    // Chọn ngẫu nhiên hai phần tử từ mảng đã xáo trộn
     let r1 = shuffledEmojis[Math.floor(Math.random() * shuffledEmojis.length)];
     let r2 = shuffledEmojis[Math.floor(Math.random() * shuffledEmojis.length)];
-    let r3 = shuffledEmojis[Math.floor(Math.random() * shuffledEmojis.length)];
+    // Chọn ngẫu nhiên phần tử thứ ba từ toàn bộ mảng gốc
+    let r3 = emojis[Math.floor(Math.random() * emojis.length)];
 
     let msg = await message.channel.send(`${bc} ${bc} ${bc}`);
     let msg2 = await message.channel.send("<:dm_uongtra:1141803196944236606> **Đợi xíu để lắc nè**");
