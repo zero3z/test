@@ -16,26 +16,48 @@ module.exports = {
   description: "Lắc tài xỉu",
   usage: "{prefix}taixiu",
   async execute(client, message, args) {
-    if (!message.member.roles.cache.find(r => r.name === "Lắc Tài Xỉu")) return client.deleteMsg(message, `${client.e.error} Bạn phải có role \`Lắc Tài Xỉu\` để có thể sử dụng lệnh này!`, 8000, "reply")
-    let r1 = Math.floor(Math.random() * emojis.length);
-    let r2 = Math.floor(Math.random() * emojis.length);
-    let r3 = Math.floor(Math.random() * emojis.length);
-    const diem = (r1 + 1) + (r2 + 1) + (r3 + 1);
-    let msg = await message.channel.send(`${tx} ${tx} ${tx}`)
-    let msg2 = await message.channel.send("<:dm_uongtra:1141803196944236606> **Đợi xíu để lắc nè**")
-    await client.sleep(2000)
-    msg.edit(`${emojis[r1]} ${tx} ${tx}`)
-    await client.sleep(2000)
-    msg.edit(`${emojis[r1]} ${emojis[r2]} ${tx}`)
-    await client.sleep(1500)
-    msg.edit(`${emojis[r1]} ${emojis[r2]} ${emojis[r3]}`)
-    let taixiu
-    if (diem >= 1 && diem <= 10) {
-      taixiu = "Xỉu"
-    } else if (diem > 10 && diem <= 18) {
-      taixiu = "Tài"
+    if (!message.member.roles.cache.find(r => r.name === "Lắc Tài Xỉu")) {
+      return client.deleteMsg(message, `${client.e.error} Bạn phải có role \`Lắc Tài Xỉu\` để có thể sử dụng lệnh này!`, 8000, "reply");
     }
-    let chanle = diem % 2 == 0 ? "Chẵn" : "Lẻ"
-    msg2.edit(`<a:dm_pinkfire:1141799130805567610> **${diem}・${taixiu}・${chanle}**  <a:dm_pinkfire:1141799130805567610>`)
+
+    // Hàm xáo trộn mảng
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    // Xáo trộn mảng emojis
+    let shuffledEmojis = shuffle([...emojis]);
+
+    // Chọn ngẫu nhiên ba phần tử từ mảng đã xáo trộn
+    let r1 = shuffledEmojis[Math.floor(Math.random() * shuffledEmojis.length)];
+    let r2 = shuffledEmojis[Math.floor(Math.random() * shuffledEmojis.length)];
+    let r3 = shuffledEmojis[Math.floor(Math.random() * shuffledEmojis.length)];
+
+    // Tính điểm
+    const diem = emojis.indexOf(r1) + 1 + emojis.indexOf(r2) + 1 + emojis.indexOf(r3) + 1;
+
+    let msg = await message.channel.send(`${tx} ${tx} ${tx}`);
+    let msg2 = await message.channel.send("<:dm_uongtra:1141803196944236606> **Đợi xíu để lắc nè**");
+
+    await client.sleep(2000);
+    msg.edit(`${r1} ${tx} ${tx}`);
+    await client.sleep(2000);
+    msg.edit(`${r1} ${r2} ${tx}`);
+    await client.sleep(1500);
+    msg.edit(`${r1} ${r2} ${r3}`);
+
+    let taixiu;
+    if (diem >= 1 && diem <= 10) {
+      taixiu = "Xỉu";
+    } else if (diem > 10 && diem <= 18) {
+      taixiu = "Tài";
+    }
+
+    let chanle = diem % 2 === 0 ? "Chẵn" : "Lẻ";
+    msg2.edit(`<a:dm_pinkfire:1141799130805567610> **${diem}・${taixiu}・${chanle}**  <a:dm_pinkfire:1141799130805567610>`);
   }
-}
+};
