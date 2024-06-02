@@ -28,15 +28,6 @@ module.exports = {
       return client.deleteMsg(message, `${client.e.error} Bạn phải có role \`Lắc Bầu Cua\` để có thể sử dụng lệnh này!`, 8000, "reply");
     }
 
-    function shuffle(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-      return array;
-    }
-
-    // Xáo trộn mảng emojis
     let shuffledEmojis = shuffle([...emojis]);
     let r1 = shuffledEmojis[0];
     let r2 = shuffledEmojis[1];
@@ -55,3 +46,11 @@ module.exports = {
     msg2.edit(`<a:dm_pinkfire:1141799130805567610> **${name[emojis.indexOf(r1)]}・${name[emojis.indexOf(r2)]}・${name[emojis.indexOf(r3)]}** <a:dm_pinkfire:1141799130805567610>`);
   }
 };
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]]
+  }
+  return array;
+}
