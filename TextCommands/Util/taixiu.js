@@ -32,10 +32,11 @@ module.exports = {
     // Xáo trộn mảng emojis
     let shuffledEmojis = shuffle([...emojis]);
 
-    // Chọn ngẫu nhiên ba phần tử từ mảng đã xáo trộn
+    // Chọn ngẫu nhiên hai phần tử từ mảng đã xáo trộn
     let r1 = shuffledEmojis[Math.floor(Math.random() * shuffledEmojis.length)];
     let r2 = shuffledEmojis[Math.floor(Math.random() * shuffledEmojis.length)];
-    let r3 = shuffledEmojis[Math.floor(Math.random() * shuffledEmojis.length)];
+    // Chọn ngẫu nhiên phần tử thứ ba từ toàn bộ mảng gốc
+    let r3 = emojis[Math.floor(Math.random() * emojis.length)];
 
     // Tính điểm
     const diem = emojis.indexOf(r1) + 1 + emojis.indexOf(r2) + 1 + emojis.indexOf(r3) + 1;
