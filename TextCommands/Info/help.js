@@ -43,7 +43,7 @@ module.exports = {
       .setFooter({ text: "Cảm ơn vì đã sử dụng bot", iconURL: `https://cdn.discordapp.com/emojis/992254651489595492.gif?size=96&quality=lossless` })
       .setTimestamp();
       await message.reply({ embeds: [embed] })
-      await message.channel.send(`Để biết thêm thông tin về cách chúng tôi sử dụng và bảo vệ dữ liệu của bạn, vui lòng xem [Chính sách bảo mật](https://github.com/DuckMei/Privacy-Policy-Bot) của chúng tôi`)
+      await message.channel.send(`[Chính sách bảo mật](https://github.com/DuckMei/Privacy-Policy-Bot) & [Điều khoản dịch vụ](https://github.com/DuckMei/ToS-Bot)`)
     }
     else {
       const command =
