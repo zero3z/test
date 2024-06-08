@@ -36,14 +36,14 @@ module.exports = {
 
       const embed = new EmbedBuilder()
       .setTitle("Danh Sách Lệnh Của DuckMei")
-      .setDescription(`Prefix của tớ là ${prefix}\n\Để biết thêm thông tin về cách chúng tôi sử dụng và bảo vệ dữ liệu của bạn, vui lòng xem [Chính sách bảo mật](https://github.com/DuckMei/Privacy-Policy-Bot) của chúng tôi`)
+      .setDescription(`Prefix của tớ là ${prefix}`)
       .setColor(client.c.fvr)
       .setThumbnail(client.user.displayAvatarURL({ dynamic: true, size: 512 }))
       .addFields(categories)
       .setFooter({ text: "Cảm ơn vì đã sử dụng bot", iconURL: `https://cdn.discordapp.com/emojis/992254651489595492.gif?size=96&quality=lossless` })
       .setTimestamp();
       await message.reply({ embeds: [embed] })
-      await message.channel.send(`\`\`\`Bảo Trì Tính Năng Soundboard\`\`\``)
+      await message.channel.send(`Để biết thêm thông tin về cách chúng tôi sử dụng và bảo vệ dữ liệu của bạn, vui lòng xem [Chính sách bảo mật](https://github.com/DuckMei/Privacy-Policy-Bot) của chúng tôi`)
     }
     else {
       const command =
