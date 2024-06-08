@@ -36,7 +36,7 @@ module.exports = {
 
       const embed = new EmbedBuilder()
       .setTitle("Danh Sách Lệnh Của DuckMei")
-      .setDescription(`Prefix của tớ là ${prefix}`)
+      .setDescription(`Prefix của tớ là ${prefix}\n\Để biết thêm thông tin về cách chúng tôi sử dụng và bảo vệ dữ liệu của bạn, vui lòng xem [Chính sách bảo mật](https://github.com/DuckMei/Privacy-Policy-Bot) của chúng tôi`)
       .setColor(client.c.fvr)
       .setThumbnail(client.user.displayAvatarURL({ dynamic: true, size: 512 }))
       .addFields(categories)
