@@ -42,7 +42,7 @@ module.exports = {
     const diem = emojis.indexOf(r1) + 1 + emojis.indexOf(r2) + 1 + emojis.indexOf(r3) + 1;
 
     let msg = await message.channel.send(`${tx} ${tx} ${tx}`);
-    let msg2 = await message.channel.send("<:dm_uongtra:1141803196944236606> **Đợi xíu để lắc nè**");
+    let msg2 = await message.channel.send("<a:uongtra:1252227009611042826> **Đợi xíu để lắc nè**");
 
     await client.sleep(2000);
     msg.edit(`${r1} ${tx} ${tx}`);
