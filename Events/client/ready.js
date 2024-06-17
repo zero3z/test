@@ -7,7 +7,7 @@ module.exports = {
     client.user.setPresence({
     activities: [
       {
-        name: `Cùng ${client.guilds.cache.size} Servers | ${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString(`en-US`)} Members!!`,
+        name: `Bé Bún`,
         type: ActivityType.Streaming,
         url: "https://www.twitch.tv/lookinsomething"
       }
