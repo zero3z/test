@@ -59,6 +59,6 @@ module.exports = {
     }
 
     let chanle = diem % 2 === 0 ? "Chẵn" : "Lẻ";
-    msg2.edit(`<a:dm_pinkfire:1141799130805567610> **${diem}・${taixiu}・${chanle}**  <a:dm_pinkfire:1141799130805567610>`);
+    msg2.edit(`<a:lua:1252226210671628300> **${diem}・${taixiu}・${chanle}**  <a:lua:1252226210671628300>`);
   }
 };
