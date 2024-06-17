@@ -35,7 +35,7 @@ module.exports = {
         });
 
       const embed = new EmbedBuilder()
-      .setTitle("Danh Sách Lệnh Của DuckMei")
+      .setTitle("Danh Sách Lệnh Của Bot")
       .setDescription(`Prefix của tớ là ${prefix}`)
       .setColor(client.c.fvr)
       .setThumbnail(client.user.displayAvatarURL({ dynamic: true, size: 512 }))
