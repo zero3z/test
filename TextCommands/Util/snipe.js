@@ -13,12 +13,12 @@ module.exports = {
     let index = 0;
     const snipes = client.snipes.get(message.channel.id);
     if (!snipes) {
-      return client.deleteMsg(message, `${client.e.error} Ở đây không có tin nhắn nào bị xoá cả`, 5000, "reply");
+      return client.deleteMsg(message, `${client.e.error} Không có tin nhắn nào bị xoá `, 5000, "reply");
     }
     const sotn = args[0] - 1 || 0;
     const tnxoa = snipes[sotn];
     if (!tnxoa) {
-      return client.deleteMsg(message, `${client.e.error} Ở đây chỉ có \`${snipes.length}\` tin nhắn đã bị xoá`, 5000, "reply");
+      return client.deleteMsg(message, `${client.e.error} Ở đây chỉ có \`${snipes.length}\` tin nhắn đã xoá`, 5000, "reply");
     }
 
     const embed = new EmbedBuilder()
