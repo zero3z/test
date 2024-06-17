@@ -1,10 +1,10 @@
 const emojis = [
-  "<:tom:1138557841100255242>",
-  "<:cua:1138557736620150895>",
-  "<:ca:1138558974837411870>",
-  "<:nai:1138557887900303400>",
-  "<:ga:1138558073716350997>",
-  "<:bau:1138557973170499584>"
+  "<:tom:1252283660074352640>",
+  "<:cua:1252283702671839374>",
+  "<:ca:1252283746640728074>",
+  "<:nai:1252283822620414015>",
+  "<:ga:1252283864202870905>",
+  "<:bau:1252283909127798905>"
 ];
 const name = [
   "Tôm",
@@ -14,7 +14,7 @@ const name = [
   "Gà",
   "Bầu"
 ];
-const bc = "<a:lacbaucua:929768889565466634>";
+const bc = "<a:lac:1252285318388781096>";
 
 module.exports = {
   name: "baucua",
@@ -47,7 +47,7 @@ module.exports = {
     let r3 = emojis[Math.floor(Math.random() * emojis.length)];
 
     let msg = await message.channel.send(`${bc} ${bc} ${bc}`);
-    let msg2 = await message.channel.send("<:dm_uongtra:1141803196944236606> **Đợi xíu để lắc nè**");
+    let msg2 = await message.channel.send("<a:uongtra:1252227009611042826> **Đợi xíu để lắc nè**");
     console.log(`${name[emojis.indexOf(r1)]}・${name[emojis.indexOf(r2)]}・${name[emojis.indexOf(r3)]}`);
 
     await client.sleep(2000);
@@ -56,6 +56,6 @@ module.exports = {
     msg.edit(`${r1} ${r2} ${bc}`);
     await client.sleep(1500);
     msg.edit(`${r1} ${r2} ${r3}`);
-    msg2.edit(`<a:dm_pinkfire:1141799130805567610> **${name[emojis.indexOf(r1)]}・${name[emojis.indexOf(r2)]}・${name[emojis.indexOf(r3)]}** <a:dm_pinkfire:1141799130805567610>`);
+    msg2.edit(`<a:money:1246808971499540490> **${name[emojis.indexOf(r1)]}・${name[emojis.indexOf(r2)]}・${name[emojis.indexOf(r3)]}** <a:money:1246808971499540490>`);
   }
 };
