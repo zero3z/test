@@ -2,14 +2,14 @@
   "giveawayManager": {
     "privateMessageInformation": true,
     "everyoneMention": false,
-    "reaction": "<a:dm_pinkheart2:1141731851170484224>"
+    "reaction": "<a:hopqua:1246802611370328186>"
   },
   "messages": {
-    "giveaway": "<a:dm_pinkheart:1141727277235851274> **GIVEAWAY** <a:dm_pinkheart:1141727277235851274>",
-    "giveawayEnded": "<a:dm_pinkheart:1141727277235851274> **GIVEAWAY ENDED** <a:dm_pinkheart:1141727277235851274>",
+    "giveaway": "<a:sao2:1252225205254750278> **GIVEAWAY** <a:sao:1252225089013940265>",
+    "giveawayEnded": "<a:sao:1252225089013940265> **GIVEAWAY ENDED** <a:sao:1252225089013940265>",
     "title": "{this.prize}",
-    "drawing": "<a:dm_pinkrollingstar:1141733209533583460>・Kết thúc trong: {timestamp}",
-    "inviteToParticipate": "Bấm <a:dm_pinkheart2:1141731851170484224> để tham gia giveaway!",
+    "drawing": "<a:moon:1252225593169412186>・Kết thúc trong: {timestamp}",
+    "inviteToParticipate": "Bấm <a:hopqua:1246802611370328186> để tham gia giveaway!",
     "winMessage": {
       "content": "<:giveaway:1231369977756647484> Chúc mừng {winners}! đã trúng **{this.prize}**",
       "replyToGiveaway": true
